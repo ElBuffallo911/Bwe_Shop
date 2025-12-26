@@ -1,1 +1,1 @@
-# Bwe_Shop
+bwe-mini-app
