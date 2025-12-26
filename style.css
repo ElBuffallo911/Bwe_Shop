@@ -1,50 +1,128 @@
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background: #0f0f0f;
-  color: #fff;
-  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", Roboto, Inter, sans-serif;
+
+  background:
+    radial-gradient(1200px 600px at 50% -200px, #1f1f1f 0%, #0b0b0b 60%),
+    linear-gradient(180deg, #0b0b0b, #000);
+
+  color: #f2f2f2;
 }
 
+/* ===== Header ===== */
 h1 {
   text-align: center;
-  margin: 16px 0;
+  margin: 20px 0 16px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
+/* ===== Layout ===== */
 #app {
   padding: 12px;
+  padding-bottom: 100px;
 }
 
+/* ===== Card ===== */
 .card {
-  background: #1e1e1e;
-  border-radius: 14px;
+  background:
+    linear-gradient(180deg, #1a1a1a, #121212);
+  border-radius: 18px;
   padding: 16px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+.card:active {
+  transform: scale(0.985);
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* ===== Text ===== */
+.card b {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ===== Buttons ===== */
 button {
   width: 100%;
-  padding: 14px;
-  border-radius: 14px;
+  margin-top: 12px;
+  padding: 14px 16px;
+
+  background:
+    linear-gradient(180deg, #2a2a2a, #1c1c1c);
+  color: #fff;
+
   border: none;
-  background: #2a2a2a;
-  color: white;
-  font-size: 16px;
-  margin-top: 10px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 500;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
 }
 
 button:active {
-  background: #3a3a3a;
+  transform: scale(0.97);
+  opacity: 0.9;
 }
 
+/* ===== Quantity ===== */
 .qty {
-  font-size: 18px;
-  margin: 0 12px;
+  display: inline-block;
+  min-width: 28px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-input, select {
+/* ===== Inputs ===== */
+input,
+select {
   width: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: none;
-  margin-top: 8px;
+  margin-top: 10px;
+  padding: 14px 16px;
+
+  background: #0d0d0d;
+  color: #f2f2f2;
+
+  border-radius: 14px;
+  border: 1px solid #1f1f1f;
+
+  font-size: 15px;
+  outline: none;
 }
+
+input::placeholder {
+  color: #777;
+}
+
+select {
+  appearance: none;
+}
+
+/* ===== Confirm button ===== */
+#confirmBtn {
+  background:
+    linear-gradient(180deg, #3a3a3a, #242424);
+  font-weight: 600;
+  }
