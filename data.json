@@ -1,0 +1,12 @@
+{
+  "categories": [
+    {
+      "id": "weed",
+      "title": "🌿 WEED",
+      "items": [
+        { "id": "bpp", "name": "Banana Purple Punch" },
+        { "id": "og", "name": "OG Kush" }
+      ]
+    }
+  ]
+}
